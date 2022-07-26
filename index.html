@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML/CSS App. 2</title>
+    <script defer src="script.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+      #internalcss {
+        color: crimson;
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="head">
+        <h1 id="home">HTML/CSS Apprentice 2</h1>
+      </div>
+      <div class="navigation">
+        <nav class="nav-grid-container">
+          <a class="nav-grid-item nav-grid-item-1" href="#home">Home</a>
+          <a class="nav-grid-item nav-grid-item-1" href="#acc">Accessibility</a>
+          <a class="nav-grid-item nav-grid-item-1" href="#maps">Maps</a>
+          <a class="nav-grid-item nav-grid-item-1" href="#forms">Forms</a>
+        </nav>
+      </div>
+      <div class="acc-div" role="Accessibility Section" id="acc">
+        <h2>ARIA and Accessibility Options</h2>
+        <h3>ARIA with Flexbox Example</h3>
+        <div class="flex-container">
+          <p class="flex-items flex-item-1">
+            ARIA stands for <i>Accessible Rich Internet Applications</i>
+          </p>
+          <p class="flex-items flex-item-2">
+            A set of roles and attributes that define ways to make web content
+            more accessible to people with disablities
+          </p>
+          <p class="flex-items flex-item-3">
+            First Rule of ARIA;
+            <q
+              >If you can use a native HTML element or attribute with the
+              semantics and behavior you require already built in, instead of
+              re-purposing and element and addings an ARIA roles, state or
+              propety, then do so</q
+            >
+          </p>
+          <p class="flex-items flex-item-4">
+            <q>No ARIA is better than bad ARIA</q>, ARIA is designed to make
+            webpages easier to use, but if use incorrectly can do more harm than
+            good
+          </p>
+          <p class="flex-items flex-item-5">
+            <code>role="element context"</code> - This attribute can be used on
+            an non-semantic element to give better context to the browser on the
+            content of the element
+          </p>
+          <p class="flex-items flex-item-6">
+            ARIA attributes can also be added and updated dynamically using
+            Javascript, ex. <code>setAttribute</code>
+          </p>
+          <p class="flex-items flex-item-7">
+            All content on a webpage should be accessible with those using
+            assistive technology and those not using it
+          </p>
+        </div>
+        <h3>More Accessibility Options with Grid Example</h3>
+        <div class="grid-container">
+          <div class="grid-item-1 grid-item">
+            <h3>Semantic HTML</h3>
+            <ul>
+              <li>
+                You should use the correct HTML tags for their intended use as
+                much as possible
+              </li>
+              <li>
+                Gives context to screen readers for those visually impared
+              </li>
+              <li>
+                ex. div and span are non-sementic elements as they give no
+                context to their content
+              </li>
+              <li>
+                ex. button, form, table, and article are semantic elements,
+                there is context to the content included
+              </li>
+            </ul>
+          </div>
+          <div class="grid-item-2 grid-item">
+            <h3>Headings</h3>
+            <ul>
+              <li>h1 through h6 elements</li>
+              <li>
+                Search engines use headings to index the structure of a webpage
+              </li>
+              <li>
+                Users skim pages based on headings, so it's important to show
+                give a good explaination on what is included under that heading,
+                as well as how it connects to other headings
+              </li>
+              <li>
+                screen readers use headers as a navigation tool based on the
+                importance of the element used
+              </li>
+              <li>
+                Use headings <b>ONLY</b> as headings, not to just makes text big
+                and bold
+              </li>
+            </ul>
+          </div>
+          <div class="grid-item-3 grid-item">
+            <h3>Alternative Text</h3>
+            <ul>
+              <li>
+                <code>img src="image source" alt="alternative text"</code>
+              </li>
+              <li>
+                The alternative text attribute provides a text alternative to
+                display if the image in unavailable for any reason
+              </li>
+              <li>Alternative text should describe the provided image</li>
+            </ul>
+          </div>
+          <div class="grid-item-4 grid-item">
+            <h3>Declaring Language</h3>
+            <ul>
+              <li><code>html lang"language used"</code></li>
+              <li>You should always state the language used in the html tag</li>
+              <li>
+                This assists search engines and browsers with displaying you
+                webpage correctly
+              </li>
+            </ul>
+          </div>
+          <!-- Last grid item -->
+        </div>
+        <!-- Grid Container -->
+      </div>
+      <!-- acc section-->
+      <div class="mapsdiv" role="Clickable Maps Section" id="maps">
+        <h2>Clickable Regions/Maps</h2>
+        <h3 style="color: #071013; font-size: 25px; padding-left: 7%">
+          Image Map Example
+        </h3>
+        <img
+          src="mapexample.jpg"
+          alt="Picture of a desk with a computer"
+          usemap="#mapexample"
+        />
+        <map name="mapexample">
+          <area
+            shape="rect"
+            coords="346,172,854,466"
+            target="_blank"
+            alt="Landscape Monitor"
+            title="Landscape Monitor"
+            href="https://en.wikipedia.org/wiki/Computer_monitor"
+          />
+          <area
+            coords="418,686,723,734"
+            shape="rect"
+            target="_blank"
+            alt="Keyboard"
+            title="Keyboard"
+            href="https://en.wikipedia.org/wiki/Computer_keyboard"
+          />
+          <area
+            coords="937,494,94"
+            shape="circle"
+            target="_blank"
+            alt="Headphones"
+            title="Headphones"
+            href="https://en.wikipedia.org/wiki/Headphones"
+          />
+          <area
+            coords="48,122,329,614"
+            shape="rect"
+            target="_blank"
+            alt="Portrait Monitor"
+            title="Portrait Monitor"
+            href="https://en.wikipedia.org/wiki/Computer_monitor"
+          />
+        </map>
+      </div>
+      <div role="Forms Section" class="formsdiv">
+        <h2 id="forms">Forms</h2>
+        <div class="forms-container">
+          <div class="forms-item forms-item-1">
+            <h3>Text Input</h3>
+            <p>Simple login form with validation:</p>
+            <div id="error"></div>
+            <form id="form" action="/" method="GET" autocomplete="off">
+              <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" />
+              </div>
+              <div>
+                <label for="password">Password:</label>
+                <input type="text" id="password" name="password" />
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <div class="forms-item forms-item-2">
+            <h3>Radio Input Type</h3>
+            <p class="turleq">What's your favorite size of turtle?</p>
+            <form action="results.html" method="GET">
+              <input type="radio" id="small" name="turtlesize" value="Small" />
+              <label for="small">Small</label><br />
+              <input
+                type="radio"
+                id="medium"
+                name="turtlesize"
+                value="Medium"
+              />
+              <label for="medium">Medium</label><br />
+              <input type="radio" id="large" name="turtlesize" value="Large" />
+              <label for="large">Large</label><br />
+              <input
+                type="radio"
+                id="bigboy"
+                name="turtlesize"
+                value="Big Boy"
+              />
+              <label for="bigboy">Big Boy</label><br />
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+          <div class="forms-item forms-item-3">
+            <h3>Checkbox Input Type</h3>
+            <p>Which of these aniamls do you like?</p>
+            <form action="results.html" method="GET">
+              <input type="checkbox" id="cat" name="cat" value="Cat" />
+              <label for="cat">I like cats!</label><br />
+              <input type="checkbox" id="cow" name="cow" value="Cow" />
+              <label for="cow">I like cows!</label><br />
+              <input
+                type="checkbox"
+                id="giraffe"
+                name="giraffe"
+                value="Giraffe"
+              />
+              <label for="giraffe">I like giraffes!</label><br />
+              <input type="checkbox" id="dog" name="dog" value="Dog" />
+              <label for="dog">I like dogs!</label><br />
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+        </div><!-- Forms Container -->
+      </div><!-- Forms Section -->
+    </div><!-- Wrapper -->
+  </body>
+  <footer>
+    <p>Mathew Fenwick 2022</p>
+    <a href="#home">Back to Top</a>
+    <pre>This site displays all skills required
+for the HTML/CSS Apprentice 2 badge.</pre>
+  </footer>
+</html>
